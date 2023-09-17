@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Neue Machina"; /* Имя шрифта */
+    src: url(fonts/NeueMachina-Regular.ttf); /* Путь к файлу со шрифтом */
+} 
+
+
+// TYPOGRAPHY
+h1{//SAMPLE H3
+    font-size: 1.75rem;
+    font-weight: 400;
+    letter-spacing: -0.0875rem;
+}
+
+h2{//SAMPLE H1
+    
+
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+
+
+
+}
+
+h3{//DESCR H2
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.75rem; /* 140% */
+}
+
+p{//DESCR H3 H4 BTN INP
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.625rem; /* 144.444% */
+}
+
+li{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+
+
+
+
+
+
+
+input{
+    font-family: inherit;
+}
+
+button{
+    font-family: inherit;
+}
+
+html{
+    font-size: 1rem;
+    font-family: "Neue Machina";
+    
+}
+
+.price{
+    font-weight: 800;
+    
+    :nth-child(2){
+        font-size: 5rem;
+        letter-spacing: -0.25rem;
+    }
+
+    :first-child{
+        vertical-align: sub;
+    }
+
+
+}
+
+details {
+    summary{
+        font-weight: 800;
+        font-size:1.25rem;
+    }
+    
+}

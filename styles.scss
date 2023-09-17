@@ -1,0 +1,307 @@
+
+
+$base-white: rgba(255, 255, 255, 1);
+$base-black: rgba(21, 21, 21, 1);
+$black: #151515;
+
+._black{
+    background-color:$base-black;
+    color:$base-white;
+}
+
+
+html{
+    background-color: $base-white;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem;
+    padding-bottom: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-style: normal;
+    font-size: 1.125rem;
+    
+}
+
+.row {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.conteiner,
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    gap:2.5rem;
+}
+.navigation,
+.authentication{
+    display: flex;
+    align-items: center;
+
+    display: none;
+}
+
+
+.navigation__link{
+    text-decoration: none;
+    color: $base-black;
+    white-space: nowrap;
+}
+
+
+.authentication{
+    &__login,
+    &__sign-up{
+        width: 9rem;
+    }
+
+}
+
+.button{
+    display: flex;
+    height: 3.25rem;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    
+    
+}
+.button_transparent{
+    background-color: transparent;
+}
+
+.main{
+    padding: 0 1.25rem;
+    text-align: left;
+}
+
+.hero{
+    &__title{
+        margin-bottom: 2.2rem;
+    }
+    &__email-form{
+        margin-bottom: 2.5rem;
+    }
+    &__illustration{
+        margin-top:2.5rem;
+    }
+}
+
+.email-form{
+    max-width: 30rem;
+    display: flex; 
+    height: 3.25rem;
+    border: 1px solid #151515;
+
+		&__input{
+            padding: 0;
+            border: none;
+
+
+            width: 55%; //всей формы
+        }
+
+		&__button{
+            background-color:$base-black;
+            color:$base-white;
+            width:45% ;//всей формы
+            border: none;
+        }
+
+        
+
+}
+.bank-icon{
+    max-width: 20.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-header{
+    border:1px solid black;
+    display:inline-block;
+    padding: 0 1rem;
+    height: 2.25rem;
+    white-space: nowrap;
+
+    margin-top: 6.25rem;
+    
+}
+
+.list{
+    list-style-type: square;
+    list-style-image: url(images/ui-elements-dot-black.png);
+    
+}
+
+.block{
+
+    display: flex;
+
+    &__icon{
+        max-width: 68px;
+        max-height: 68px;
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+}
+
+.cards-box{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 1.25rem auto 0;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #151515;
+    padding: 3rem 0;
+    flex:1 0 320px;
+   
+    .card__wrap{
+        margin:0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__description{
+        margin-left: 1.5rem;
+        margin-bottom: 60px;
+        margin: 31px 0px 60px 24px;
+    }
+
+    &__button{
+        margin: 62px 40px 0;
+        width: 240px;
+        height: 52px;
+
+        background-color: $black;
+        color: #fff;
+
+       
+        bottom: 48px;
+        
+    }
+}
+.price{
+    margin-left: 1.5rem;
+    display: flex;
+
+    // .price__currency
+
+    &__currency{
+        position: relative;
+        top: 1rem;
+    }
+
+    // .price__period
+
+    &__period{
+        position: relative;
+        top: 4rem;
+        margin-left:0.75rem ;
+    }
+
+}
+.card_black-theme{
+    background-color: $black;
+    color: white;
+    .card__list{
+        list-style-image: url(images/ui-elements-dot-white.png);
+    }
+    .card__button{
+        background-color: #fff;
+        color:$black ;
+    }
+
+}
+
+
+.details{
+    border-top: 1px solid $black;
+    padding: 20px 0px;
+
+}
+
+
+.footer {
+    background: $black;
+    color: #fff;
+    padding: 40px 20px;
+    margin-top: 100px ;
+
+    &__email {
+        text-align: right;
+    }
+
+    &__list-links{
+        padding: 0;
+    }
+
+    &__email-form{
+        border:1px solid white;
+    }
+    &__input{
+        background-color: $black;
+        color: white;
+    }
+    &__button{
+        background-color: white;
+        color: $black;
+    }
+
+}
+
+@media screen and (min-width:840px) {
+    .navigation,
+    .authentication{
+        display: flex;
+    }
+    .menu{
+        display: none;
+    }
+
+    h1{
+        font-size: 70px;
+        line-height: 80px; /* 114.286% */
+        letter-spacing: -4px;
+        
+    }
+
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 120px;
+        &__wrap{
+            flex:0 1 500px;
+        }
+        
+    }
+
+}
