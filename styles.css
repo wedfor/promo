@@ -226,11 +226,17 @@ html {
   color: #151515;
 }
 
-.illustration {
-  width: 90%;
+.social {
+  display: flex;
 }
 
-@media screen and (min-width: 840px) {
+.illustration {
+  width: 90%;
+  max-width: 660px;
+  max-height: 700px;
+}
+
+@media screen and (min-width: 1024px) {
   .navigation,
   .authentication {
     display: flex;
@@ -243,12 +249,33 @@ html {
     line-height: 80px; /* 114.286% */
     letter-spacing: -4px;
   }
-  .hero {
+  .section-title {
+    font-size: 60px;
+    line-height: 58px;
+    letter-spacing: -3px;
+    font-weight: 400;
+  }
+  .section-header {
+    margin-top: 0px;
+  }
+  .hero,
+  .about-us,
+  .how-it-works,
+  .pricing__wrap,
+  .FAQs {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: 120px;
   }
-  .hero__wrap {
-    flex: 0 1 500px;
+  .about-us__wrap {
+    order: 1;
+  }
+  .pricing__text-wrap {
+    order: 1;
+    text-align: right;
+  }
+  .card {
+    max-width: 305px;
   }
 }/*# sourceMappingURL=styles.css.map */
