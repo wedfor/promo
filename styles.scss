@@ -72,8 +72,17 @@ body{
     &__login,
     &__sign-up{
         width: 9rem;
+       
     }
+    &__sign-ip{
+        background-color:$base-black;
+        color: $base-white;
+    }
+}
 
+.authentication__sign-up:hover{
+    background-color: transparent;
+    color: $black;
 }
 
 .button{
@@ -85,9 +94,18 @@ body{
     
     
 }
+
+// .button:hover{
+//     background-color: transparent;
+//     color:$black;
+// }
+
+
 .button_transparent{
     background-color: transparent;
 }
+
+
 
 .main{
     text-align: left;
@@ -127,6 +145,12 @@ body{
             color:$base-white;
             width:45% ;//всей формы
             border: none;
+        }
+        &__button:hover{
+            background-color:transparent;
+            color:$black;
+            border-left:1px solid $black;
+
         }
 
         
@@ -207,13 +231,25 @@ body{
         margin: 62px 40px 0;
         width: 240px;
         height: 52px;
-
+        bottom: 48px;
+    }
+    &__button_black{
         background-color: $black;
         color: #fff;
-
-       
-        bottom: 48px;
-        
+    }
+    &__button_black:hover{
+        background-color: transparent;
+        color: $base-black;
+        border: 1px solid $base-white;
+    }
+    &__button_white{
+            background-color: #fff;
+            color:$black ;
+        }
+    &__button_white:hover{
+        background-color: $black;
+        color:$base-white;
+        border: 1px solid $base-white;
     }
 }
 .price{
@@ -242,10 +278,7 @@ body{
     .card__list{
         list-style-image: url(images/ui-elements-dot-white.png);
     }
-    .card__button{
-        background-color: #fff;
-        color:$black ;
-    }
+    
 
 }
 
@@ -262,10 +295,36 @@ body{
     color: #fff;
     padding: 40px 20px;
     margin-top: 100px ;
+    display: grid;
+    grid-template-areas: "logo email" "social social" "column1 column1" "column2 column2" "form form" "copy copy";
     
+    &__logo {
+        grid-area: logo;
+    }
 
     &__email {
         text-align: right;
+        grid-area: email;
+    }
+
+    &__social {
+        grid-area: social;
+    }
+
+    &__column1 {
+        grid-area: column1;
+    }
+
+    &__column2 {
+        grid-area: column2;
+    }
+
+    &__form {
+        grid-area: form;
+    }
+
+    &__copy {
+        grid-area: copy;
     }
 
     &__list-links{
@@ -275,6 +334,8 @@ body{
     &__email-form{
         border:1px solid white;
     }
+
+
     &__input{
         background-color: $black;
         color: white;
@@ -282,6 +343,10 @@ body{
     &__button{
         background-color: white;
         color: $black;
+    }
+    &__button:hover{
+        background-color: transparent !important;
+        color: $base-white !important;
     }
 
 }
@@ -353,8 +418,12 @@ body{
         order: 1;
         text-align: right;
     }
+
+    .cards-box{
+        gap:24px;
+    }
     .card{
-        max-width: 305px;
+        width: 305px;
     }
 
     .footer__email{
@@ -368,8 +437,9 @@ body{
         height: 560px;
         
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 60px);
+        // grid-template-columns: repeat(4, 1fr);
+        // grid-template-rows: repeat(5, 60px);
+        grid-template-areas: "logo logo email column2" "social social column1 column2" "form form column1 column2" "copy copy copy copy" ;
         gap: 35px;
     }
 
@@ -379,11 +449,20 @@ body{
     
     .footer__email{
         grid-column: 3;
+        justify-self: right;
     }
 
     .other-links{
         grid-column: 4;
         grid-row: 1 / 3;
+        justify-self: right;
+    }
+
+    .section-links{
+        grid-column: 3;
+        grid-row: 2 / 4;
+        justify-self: right;
+        margin-right: 55px;
     }
 
     .social{
@@ -412,7 +491,7 @@ body{
 
 @media screen and (min-width:1440px){
     .card{
-        max-width: 415px;
+        width: 415px;
     }
     .header,
     .main,
@@ -423,8 +502,13 @@ body{
 }
 
 @media screen and (min-width:2560px){
+    
+    .cards-box{
+        gap:100px;
+    }
+
     .card{
-        max-width: 436px;
+        width: 436px;
     }
     .header,
     .footer{
